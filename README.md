@@ -1,2 +1,2 @@
 # MCP-CourseNavigator
-MCP-CourseNavigator Server is a lightweight Java application that implements the Model Context Protocol (MCP), allowing AI models to access information about courses. This server exposes presentation data through standardized MCP tools, making it easy to integrate with AI assistants that support the protocol.
+The MCP-CourseNavigator Server is a sophisticated Java application implementing the Model Context Protocol (MCP) that provides comprehensive course information and educational data to AI models. This server transforms the existing job comparison framework into a powerful educational tool that enables AI assistants to access detailed course catalogs, academic information, and learning resources.
