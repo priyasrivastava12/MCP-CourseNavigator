@@ -1,12 +1,11 @@
 package mcp.coursenavigator;
 
-import org.springframework.ai.tool.ToolCallbackProvider;
-import org.springframework.ai.tool.MethodToolCallbackProvider;
+import java.util.List;
+import org.springframework.ai.support.ToolCallbacks;
+import org.springframework.ai.tool.ToolCallback;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import java.util.List;
-import org.springframework.ai.tool.annotation.Tool;
 
 @SpringBootApplication
 public class CoursenavigatorApplication {
@@ -16,8 +15,8 @@ public class CoursenavigatorApplication {
 	}
 
 	@Bean
-	public ToolCallbackProvider courseTools(CourseService courseService) {
-		return MethodToolCallbackProvider.builder().toolObjects(courseService).build();
+	public List<ToolCallback> tools(CourseService courseService) {
+		return List.of(ToolCallbacks.from(courseService));
 	}
 
 }
